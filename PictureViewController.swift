@@ -41,7 +41,7 @@ class PictureViewController: UIViewController {
                         //                                }
                         //                            }
                         //                        }
-                        product.backgroundColor = UIColor.yellowColor()
+                        product.backgroundColor = UIColor(red: 161.0/255.0, green: 130.0/255.0, blue: 239.0/255.0, alpha: 1.0)
                         count++
                         self.view.addSubview(product)
                         print(object.objectId)

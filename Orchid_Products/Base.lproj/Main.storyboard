@@ -37,11 +37,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AAn-CR-iPQ">
-                                <rect key="frame" x="20" y="156" width="280" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Wi-gd-iFc">
                                 <rect key="frame" x="20" y="210" width="79" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -63,7 +58,17 @@
                                 <state key="normal" title="Log in">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jep-X3-n6u"/>
+                                    <segue destination="zkC-rd-a7w" kind="push" id="WOC-nR-HkB"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not a member?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDe-ah-FFe">
+                                <rect key="frame" x="101" y="350" width="118" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.51536882559999997" green="0.17828056580000001" blue="0.89651554190000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1v-Sz-Vln">
                                 <rect key="frame" x="120" y="388" width="80" height="30"/>
                                 <color key="backgroundColor" red="0.74977856693081124" green="0.35815159585300416" blue="0.9731445312" alpha="1" colorSpace="calibratedRGB"/>
@@ -78,12 +83,11 @@
                                     <segue destination="P5d-EK-hbA" kind="push" id="LJb-pX-ThS"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not a member?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDe-ah-FFe">
-                                <rect key="frame" x="101" y="350" width="118" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.51536882559999997" green="0.17828056580000001" blue="0.89651554190000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AAn-CR-iPQ">
+                                <rect key="frame" x="20" y="156" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.78603274099999998" green="0.66509534150000005" blue="0.94614361700000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -108,6 +112,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Log in" id="6FQ-pg-vbG"/>
+                    <connections>
+                        <outlet property="passwordInputField" destination="rw3-nK-ddp" id="RlH-R8-JtZ"/>
+                        <outlet property="userNameInputField" destination="AAn-CR-iPQ" id="gKA-ec-ozk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -175,6 +183,7 @@
                                             <color key="titleColor" red="1" green="0.97833791569999995" blue="0.75554860260000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="signupPressed:" destination="P5d-EK-hbA" eventType="touchUpInside" id="fyo-eQ-d2x"/>
                                             <segue destination="zkC-rd-a7w" kind="push" id="NRX-Sc-Loc"/>
                                         </connections>
                                     </button>
@@ -207,6 +216,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Sign up" id="OCv-o4-4Of"/>
+                    <connections>
+                        <outlet property="passwordInputField" destination="MpC-9w-cBP" id="OmY-ED-x17"/>
+                        <outlet property="userNameInputField" destination="erF-yy-8XE" id="Rjz-Q9-1yz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hHz-4m-5Xj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -250,4 +263,7 @@
             <point key="canvasLocation" x="162" y="406"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="WOC-nR-HkB"/>
+    </inferredMetricsTieBreakers>
 </document>

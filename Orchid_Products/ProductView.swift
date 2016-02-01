@@ -19,13 +19,13 @@ class ProductView: UIView {
         self.addGestureRecognizer(tap)
         imageView.contentMode = .ScaleAspectFill
         imageView.clipsToBounds = true
-        nameLabel.backgroundColor = UIColor.redColor()
+        nameLabel.backgroundColor = UIColor(red: 240.0/255.0, green: 220.0/255.0, blue: 175.0/255.0, alpha: 1.0)
         
         self.addSubview(imageView)
         self.addSubview(nameLabel)
     }
     func tapped (recongnizer: UITapGestureRecognizer) {
-        self.backgroundColor = UIColor.greenColor()
+        self.backgroundColor = UIColor(red: 240.0/255.0, green: 220.0/255.0, blue: 175.0/255.0, alpha: 1.0)
     }
 
 }

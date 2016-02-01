@@ -7,8 +7,15 @@
 //
 
 import UIKit
+import Parse
 
 class SignupViewController: UIViewController {
+
+    @IBOutlet weak var userNameInputField: UITextField!
+    @IBOutlet weak var passwordInputField: UITextField!
+  
+    let scrollViewWallSegue = "SignupSuccesful"
+    let tableViewWallSegue = "SignupSuccesfulTable"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,20 +23,24 @@ class SignupViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
+    @IBAction func signupPressed(sender: AnyObject) {
+        
+        //If signup sucessful:
+        let user = PFUser()
+        
+        user.username = userNameInputField.text
+        user.password = passwordInputField.text
+        
+        user.signUpInBackgroundWithBlock { succeeded, error in
+            if (succeeded) {
+                //The registration was successful, go to the wall
+                self.performSegueWithIdentifier(self.scrollViewWallSegue, sender: nil)
+            }
+//            else if let error = error {
+                //Something bad has occurred
+//                self.showErrorView(error)
+//            }
+        }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

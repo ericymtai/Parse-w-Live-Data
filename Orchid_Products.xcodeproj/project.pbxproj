@@ -81,7 +81,7 @@
 		5271B3231C5FCFD1004813DC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5271B3251C5FCFE8004813DC /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		5271B3271C5FCFFA004813DC /* PictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
-		5271B32A1C5FD54E004813DC /* ProductView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
+		5271B32A1C5FD54E004813DC /* ProductView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductView.swift; path = Orchid_Products/ProductView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,8 +125,8 @@
 		5271B2C81C5FC2C7004813DC = {
 			isa = PBXGroup;
 			children = (
-				5271B3291C5FD001004813DC /* CocoaTouch Folder */,
 				5271B31D1C5FC39B004813DC /* ios9.2 FrameWork */,
+				5271B3291C5FD001004813DC /* CocoaTouch Folder */,
 				5271B2D31C5FC2C7004813DC /* Orchid_Products */,
 				5271B2E81C5FC2C7004813DC /* Orchid_ProductsTests */,
 				5271B2F31C5FC2C7004813DC /* Orchid_ProductsUITests */,
@@ -151,7 +151,6 @@
 				5271B2D61C5FC2C7004813DC /* ViewController.swift */,
 				5271B3081C5FC327004813DC /* Parse FrameWork */,
 				5271B2D81C5FC2C7004813DC /* Main.storyboard */,
-				5271B32A1C5FD54E004813DC /* ProductView.swift */,
 				5271B2DB1C5FC2C7004813DC /* Assets.xcassets */,
 				5271B2DD1C5FC2C7004813DC /* LaunchScreen.storyboard */,
 				5271B2E01C5FC2C7004813DC /* Info.plist */,
@@ -208,6 +207,7 @@
 		5271B3291C5FD001004813DC /* CocoaTouch Folder */ = {
 			isa = PBXGroup;
 			children = (
+				5271B32A1C5FD54E004813DC /* ProductView.swift */,
 				5271B3231C5FCFD1004813DC /* LoginViewController.swift */,
 				5271B3251C5FCFE8004813DC /* SignupViewController.swift */,
 				5271B3271C5FCFFA004813DC /* PictureViewController.swift */,
