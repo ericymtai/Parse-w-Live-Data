@@ -38,18 +38,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //                }
         
         // Query date
-                let query = PFQuery(className: "userData")
-        
-                query.whereKey("firstName", equalTo: "Ann")
-                query.whereKey("score", lessThan: 1000)
-        
-                query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
-                    if error == nil {
-                        print("Successfully retrieved: \(objects)")
-                    } else {
-                        print("Error: \(error!) \(error!.userInfo)")
-                    }
-                }
+//                let query = PFQuery(className: "userData")
+//        
+//                query.whereKey("firstName", equalTo: "Ann")
+//                query.whereKey("score", lessThan: 1000)
+//        
+//                query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
+//                    if error == nil {
+//                        print("Successfully retrieved: \(objects)")
+//                    } else {
+//                        print("Error: \(error!) \(error!.userInfo)")
+//                    }
+//                }
 
         return true
     }

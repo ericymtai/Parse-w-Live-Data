@@ -13,7 +13,7 @@ class PictureViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let query = PFQuery(className: "testName")
+        let query = PFQuery(className: "OrchidProducts")
         
         query.findObjectsInBackgroundWithBlock {
             (objects: [PFObject]?, error: NSError?) -> Void in
@@ -28,19 +28,22 @@ class PictureViewController: UIViewController {
                         let product = ProductView(frame: CGRect(x: 50, y:80 + (140 * count), width: 300, height: 130))
                         product.setup()
                         //  product.nameLabel.text = "test"
-                        product.nameLabel.text = object["firstName"] as? String
+                        product.nameLabel.text = object["orchidName"] as? String
                         
-                        //                        let productImageFile = object["img"] as! PFFile
-                        //
-                        //                        productImageFile.getDataInBackgroundWithBlock {
-                        //                            (imageData: NSData?, error: NSError?) -> Void in
-                        //                            if error == nil {
-                        //                                if let imageData = imageData {
-                        //                                    let image = UIImage(data:imageData)
-                        //                                    product.imageView.image = image
-                        //                                }
-                        //                            }
-                        //                        }
+                        let productImageFile = object["orchidImg"] as! PFFile
+                        
+                        productImageFile.getDataInBackgroundWithBlock {
+                            (imageData: NSData?, error: NSError?) -> Void in
+                            if error == nil {
+                                if let imageData = imageData {
+                                    let image = UIImage(data:imageData)
+                                    product.imageView.image = image
+                                }
+                            }
+                        }
+
+                        
+                        
                         product.backgroundColor = UIColor(red: 161.0/255.0, green: 130.0/255.0, blue: 239.0/255.0, alpha: 1.0)
                         count++
                         self.view.addSubview(product)
