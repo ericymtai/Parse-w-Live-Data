@@ -26,7 +26,7 @@ class PictureViewController: UIViewController {
                 if let objects = objects {
                     var count = 0;
                     for object in objects {
-                        let product = ProductView(frame: CGRect(x: 50, y:80 + (140 * count), width: 300, height: 130))
+                        let product = ProductView(frame: CGRect(x: 50, y:80 + (150 * count), width: 300, height: 140))
                         product.setup()
                         //  product.nameLabel.text = "test"
                         product.nameLabel.text = object["orchidName"] as? String

@@ -1,4 +1,4 @@
-//
+
 //  LoginViewController.swift
 //  Orchid_Products
 //
@@ -26,12 +26,14 @@ class LoginViewController: UIViewController {
 
     @IBAction func loginPressed(sender: AnyObject) {
         PFUser.logInWithUsernameInBackground(userNameInputField.text!, password: passwordInputField.text!) { user, error in
-            if user != nil {
+            if error == nil {
+                print("in")
                 self.performSegueWithIdentifier(self.scrollViewWallSegue, sender: nil)
             }
-//            else if let error = error {
-//                self.showErrorView(error)
-//            }
+            else if let error = error {
+                print(" go error")
+//                self.errorMessage.text = "User name or password is incorrect!"
+            }
         }
         
     }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="nSB-sj-oiK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="nSB-sj-oiK">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--Log in-->
@@ -48,11 +48,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rw3-nK-ddp">
-                                <rect key="frame" x="20" y="239" width="280" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1TT-z7-5Qn">
                                 <rect key="frame" x="120" y="288" width="80" height="30"/>
                                 <color key="backgroundColor" red="0.51536882559999997" green="0.17828056580000001" blue="0.89651554190000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -64,8 +59,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jep-X3-n6u"/>
-                                    <segue destination="zkC-rd-a7w" kind="push" identifier="LoginSuccesful" id="WOC-nR-HkB"/>
+                                    <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TKT-6K-COo"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not a member?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDe-ah-FFe">
@@ -88,6 +82,11 @@
                                     <segue destination="P5d-EK-hbA" kind="push" id="LJb-pX-ThS"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rw3-nK-ddp">
+                                <rect key="frame" x="20" y="239" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.78603274099999998" green="0.66509534150000005" blue="0.94614361700000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -115,6 +114,7 @@
                     <connections>
                         <outlet property="passwordInputField" destination="rw3-nK-ddp" id="RlH-R8-JtZ"/>
                         <outlet property="userNameInputField" destination="AAn-CR-iPQ" id="gKA-ec-ozk"/>
+                        <segue destination="zkC-rd-a7w" kind="push" identifier="LoginSuccesful" id="nXO-tm-Xeu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -242,7 +242,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n8t-hM-i29" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1796" y="885"/>
+            <point key="canvasLocation" x="1151" y="1270"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CjA-n1-H5b">
@@ -264,6 +264,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="NRX-Sc-Loc"/>
+        <segue reference="nXO-tm-Xeu"/>
     </inferredMetricsTieBreakers>
 </document>
