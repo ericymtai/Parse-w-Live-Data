@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class PictureViewController: UIViewController {
 
@@ -29,7 +30,7 @@ class PictureViewController: UIViewController {
                         product.setup()
                         //  product.nameLabel.text = "test"
                         product.nameLabel.text = object["orchidName"] as? String
-                        
+                        product.priceLabel.text =  "Price: $" + String(object["orchidPrice"])
                         let productImageFile = object["orchidImg"] as! PFFile
                         
                         productImageFile.getDataInBackgroundWithBlock {
@@ -42,8 +43,6 @@ class PictureViewController: UIViewController {
                             }
                         }
 
-                        
-                        
                         product.backgroundColor = UIColor(red: 161.0/255.0, green: 130.0/255.0, blue: 239.0/255.0, alpha: 1.0)
                         count++
                         self.view.addSubview(product)

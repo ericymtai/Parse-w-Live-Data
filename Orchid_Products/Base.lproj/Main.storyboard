@@ -37,6 +37,11 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AAn-CR-iPQ">
+                                <rect key="frame" x="20" y="156" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Wi-gd-iFc">
                                 <rect key="frame" x="20" y="210" width="79" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -60,7 +65,7 @@
                                 </state>
                                 <connections>
                                     <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jep-X3-n6u"/>
-                                    <segue destination="zkC-rd-a7w" kind="push" id="WOC-nR-HkB"/>
+                                    <segue destination="zkC-rd-a7w" kind="push" identifier="LoginSuccesful" id="WOC-nR-HkB"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not a member?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDe-ah-FFe">
@@ -83,11 +88,6 @@
                                     <segue destination="P5d-EK-hbA" kind="push" id="LJb-pX-ThS"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AAn-CR-iPQ">
-                                <rect key="frame" x="20" y="156" width="280" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.78603274099999998" green="0.66509534150000005" blue="0.94614361700000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -184,7 +184,7 @@
                                         </state>
                                         <connections>
                                             <action selector="signupPressed:" destination="P5d-EK-hbA" eventType="touchUpInside" id="fyo-eQ-d2x"/>
-                                            <segue destination="zkC-rd-a7w" kind="push" id="NRX-Sc-Loc"/>
+                                            <segue destination="zkC-rd-a7w" kind="push" identifier="SignupSuccesful" id="NRX-Sc-Loc"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -223,7 +223,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hHz-4m-5Xj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1069" y="405"/>
+            <point key="canvasLocation" x="1312" y="289"/>
         </scene>
         <!--Product view-->
         <scene sceneID="1qb-0a-vj7">
@@ -242,7 +242,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n8t-hM-i29" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1433" y="407"/>
+            <point key="canvasLocation" x="1796" y="885"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CjA-n1-H5b">
@@ -264,6 +264,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="WOC-nR-HkB"/>
+        <segue reference="NRX-Sc-Loc"/>
     </inferredMetricsTieBreakers>
 </document>
