@@ -62,14 +62,29 @@
                                     <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TKT-6K-COo"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rw3-nK-ddp">
+                                <rect key="frame" x="20" y="239" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="A6c-Ol-7b4">
+                                <rect key="frame" x="40" y="324" width="240" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="NJj-O3-MLf"/>
+                                    <constraint firstAttribute="width" constant="240" id="Qlg-Le-I3Z"/>
+                                </constraints>
+                                <color key="textColor" red="0.96899999999999997" green="0.025310121923084558" blue="0.046297109820543463" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not a member?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDe-ah-FFe">
-                                <rect key="frame" x="101" y="350" width="118" height="21"/>
+                                <rect key="frame" x="101" y="384" width="118" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.51536882559999997" green="0.17828056580000001" blue="0.89651554190000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1v-Sz-Vln">
-                                <rect key="frame" x="120" y="388" width="80" height="30"/>
+                                <rect key="frame" x="120" y="422" width="80" height="30"/>
                                 <color key="backgroundColor" red="0.74977856693081124" green="0.35815159585300416" blue="0.9731445312" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="jSN-ae-0x8"/>
@@ -82,17 +97,14 @@
                                     <segue destination="P5d-EK-hbA" kind="push" id="LJb-pX-ThS"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rw3-nK-ddp">
-                                <rect key="frame" x="20" y="239" width="280" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.78603274099999998" green="0.66509534150000005" blue="0.94614361700000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="rw3-nK-ddp" secondAttribute="trailing" constant="20" id="0e0-Fh-hJH"/>
-                            <constraint firstItem="sDe-ah-FFe" firstAttribute="top" secondItem="1TT-z7-5Qn" secondAttribute="bottom" constant="32" id="2Uv-V5-00e"/>
+                            <constraint firstItem="sDe-ah-FFe" firstAttribute="top" secondItem="1TT-z7-5Qn" secondAttribute="bottom" constant="66" id="2Uv-V5-00e"/>
                             <constraint firstItem="a1v-Sz-Vln" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3KK-WX-Y7y"/>
+                            <constraint firstItem="A6c-Ol-7b4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7ly-ug-6tK"/>
+                            <constraint firstItem="A6c-Ol-7b4" firstAttribute="top" secondItem="1TT-z7-5Qn" secondAttribute="bottom" constant="6" id="HGq-ys-dnM"/>
                             <constraint firstItem="AAn-CR-iPQ" firstAttribute="top" secondItem="qof-1Q-Fcy" secondAttribute="bottom" constant="8" id="Iep-kB-zeU"/>
                             <constraint firstItem="qof-1Q-Fcy" firstAttribute="top" secondItem="Yyl-86-XES" secondAttribute="bottom" constant="19" id="JqK-52-LHi"/>
                             <constraint firstItem="8Wi-gd-iFc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="K3x-mg-vAj"/>
@@ -112,6 +124,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Log in" id="6FQ-pg-vbG"/>
                     <connections>
+                        <outlet property="errorMessageField" destination="A6c-Ol-7b4" id="6nh-hF-ERy"/>
                         <outlet property="passwordInputField" destination="rw3-nK-ddp" id="RlH-R8-JtZ"/>
                         <outlet property="userNameInputField" destination="AAn-CR-iPQ" id="gKA-ec-ozk"/>
                         <segue destination="zkC-rd-a7w" kind="push" identifier="LoginSuccesful" id="nXO-tm-Xeu"/>

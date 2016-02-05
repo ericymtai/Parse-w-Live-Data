@@ -13,6 +13,7 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var userNameInputField: UITextField!
     @IBOutlet weak var passwordInputField: UITextField!
+    @IBOutlet weak var errorMessageField: UITextView!
     
     let scrollViewWallSegue = "LoginSuccesful"
     let tableViewWallSegue = "LoginSuccesfulTable"
@@ -30,9 +31,9 @@ class LoginViewController: UIViewController {
                 print("in")
                 self.performSegueWithIdentifier(self.scrollViewWallSegue, sender: nil)
             }
-            else if let error = error {
+            else if let _ = error {
                 print(" go error")
-//                self.errorMessage.text = "User name or password is incorrect!"
+                self.errorMessageField.text = "Your user name or password is incorrect! Please enter again."
             }
         }
         
