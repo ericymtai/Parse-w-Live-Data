@@ -16,7 +16,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var errorMessageField: UITextView!
     
     let scrollViewWallSegue = "LoginSuccesful"
-    let tableViewWallSegue = "LoginSuccesfulTable"
+//    let tableViewWallSegue = "LoginSuccesfulTable"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +30,10 @@ class LoginViewController: UIViewController {
             if error == nil {
                 print("in")
                 self.performSegueWithIdentifier(self.scrollViewWallSegue, sender: nil)
+                self.userNameInputField.text = ""
+                self.passwordInputField.text = ""
+                self.errorMessageField.text = ""
+                
             }
             else if let _ = error {
                 print(" go error")
