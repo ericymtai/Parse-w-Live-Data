@@ -20,8 +20,8 @@ class ProductView: UIView {
         self.addGestureRecognizer(tap)
         imageView.contentMode = .ScaleAspectFill
         imageView.clipsToBounds = true
-        priceLabel.backgroundColor = UIColor(red: 40.0/255.0, green: 220.0/255.0, blue: 175.0/255.0, alpha: 1.0)
-        nameLabel.backgroundColor = UIColor(red: 240.0/255.0, green: 220.0/255.0, blue: 175.0/255.0, alpha: 1.0)
+        priceLabel.backgroundColor = UIColor(red: 161.0/255.0, green: 130.0/255.0, blue: 239.0/255.0, alpha: 1.0)
+        nameLabel.backgroundColor = UIColor(red: 161.0/255.0, green: 130.0/255.0, blue: 239.0/255.0, alpha: 1.0)
         
         nameLabel.textAlignment = .Center
         priceLabel.textAlignment = .Center
@@ -32,6 +32,8 @@ class ProductView: UIView {
     }
     func tapped (recongnizer: UITapGestureRecognizer) {
         self.backgroundColor = UIColor(red: 240.0/255.0, green: 220.0/255.0, blue: 175.0/255.0, alpha: 1.0)
+        self.priceLabel.backgroundColor = UIColor(red: 240.0/255.0, green: 220.0/255.0, blue: 175.0/255.0, alpha: 1.0)
+        self.nameLabel.backgroundColor = UIColor(red: 240.0/255.0, green: 220.0/255.0, blue: 175.0/255.0, alpha: 1.0)
     }
 
 }
