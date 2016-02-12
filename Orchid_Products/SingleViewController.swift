@@ -1,26 +1,28 @@
 //
-//  PictureViewController.swift
+//  SingleViewController.swift
 //  Orchid_Products
 //
-//  Created by Eric Y.M. Tai on 2016-02-01.
+//  Created by Eric Y.M. Tai on 2016-02-11.
 //  Copyright © 2016 Eric Y.M. Tai. All rights reserved.
 //
 
 import UIKit
 import Parse
 
-class PictureViewController: UIViewController {
+class SingleViewController: UIViewController {
     
-    var tappedPrice = "0"
+    var productName:String = ""
 
+    var tappedPrice = "0"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         let query = PFQuery(className: "OrchidProducts")
         
         query.findObjectsInBackgroundWithBlock {
             (objects: [PFObject]?, error: NSError?) -> Void in
-            
+        
             if error == nil {
                 // The find succeeded.
                 // print("Successfully retrieved \(objects!.count) scores.")
@@ -28,13 +30,13 @@ class PictureViewController: UIViewController {
                 if let objects = objects {
                     var count = 0;
                     for object in objects {
-                        let product = ProductView(frame: CGRect(x: 50, y:80 + (150 * count), width: 300, height: 140))
+                        let product = SingleView(frame: CGRect(x: 50, y:80 + (150 * count), width: 300, height: 140))
                         product.setup()
                         product.nameLabel.text = object["orchidName"] as? String
                         
                         let price = object["orchidPrice"]
                         product.priceLabel.text =  "Price: $" + String(price)
-
+                        
                         let productImageFile = object["orchidImg"] as! PFFile
                         productImageFile.getDataInBackgroundWithBlock {
                             (imageData: NSData?, error: NSError?) -> Void in
@@ -45,12 +47,12 @@ class PictureViewController: UIViewController {
                                 }
                             }
                         }
-
+                        
                         product.backgroundColor = UIColor(red: 161.0/255.0, green: 130.0/255.0, blue: 239.0/255.0, alpha: 1.0)
                         count++
                         self.view.addSubview(product)
-                        let tapGesture = UITapGestureRecognizer(target: self, action: "openDetails:")
-                        product.addGestureRecognizer(tapGesture)
+//                        let tapGesture = UITapGestureRecognizer(target: self, action: "openDetails:")
+//                        product.addGestureRecognizer(tapGesture)
                         
                         print(object.objectId)
                     }
@@ -61,19 +63,19 @@ class PictureViewController: UIViewController {
             }
         }
     }
-    func openDetails(recognizer: UITapGestureRecognizer) {
-        print("Called\(recognizer)")
-        let product = recognizer.view as? ProductView
-        
-        self.performSegueWithIdentifier("solo", sender: product)
-    }
+//    func openDetails(recognizer: UITapGestureRecognizer) {
+//        print("Called\(recognizer)")
+//        let product = recognizer.view as? ProductView
+//        
+//        self.performSegueWithIdentifier("solo", sender: product)
+//    }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "solo" {
-            print("test\(sender!.priceLabel.text)")
-            let destination = (segue.destinationViewController as! SingleViewController)
-            destination.productName = sender!.nameLabel.text!
-        }
-    }
-
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if segue.identifier == "solo" {
+//            print("test\(sender!.priceLabel.text)")
+//            let destination = (segue.destinationViewController as! SingleViewController)
+//            destination.productName = sender!.nameLabel.text!
+//        }
+//    }
+    
 }

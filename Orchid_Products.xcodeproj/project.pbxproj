@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5264F72D1C6D43E800530824 /* SingleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5264F72C1C6D43E800530824 /* SingleViewController.swift */; };
+		5264F72F1C6D503700530824 /* SingleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5264F72E1C6D503700530824 /* SingleView.swift */; };
 		5271B2D51C5FC2C7004813DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5271B2D41C5FC2C7004813DC /* AppDelegate.swift */; };
 		5271B2D71C5FC2C7004813DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5271B2D61C5FC2C7004813DC /* ViewController.swift */; };
 		5271B2DA1C5FC2C7004813DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5271B2D81C5FC2C7004813DC /* Main.storyboard */; };
@@ -51,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5264F72C1C6D43E800530824 /* SingleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SingleViewController.swift; path = Orchid_Products/SingleViewController.swift; sourceTree = "<group>"; };
+		5264F72E1C6D503700530824 /* SingleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleView.swift; sourceTree = "<group>"; };
 		5271B2D11C5FC2C7004813DC /* Orchid_Products.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Orchid_Products.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5271B2D41C5FC2C7004813DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5271B2D61C5FC2C7004813DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -208,9 +212,11 @@
 			isa = PBXGroup;
 			children = (
 				5271B32A1C5FD54E004813DC /* ProductView.swift */,
+				5264F72E1C6D503700530824 /* SingleView.swift */,
 				5271B3231C5FCFD1004813DC /* LoginViewController.swift */,
 				5271B3251C5FCFE8004813DC /* SignupViewController.swift */,
 				5271B3271C5FCFFA004813DC /* PictureViewController.swift */,
+				5264F72C1C6D43E800530824 /* SingleViewController.swift */,
 			);
 			name = "CocoaTouch Folder";
 			sourceTree = "<group>";
@@ -346,10 +352,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5264F72F1C6D503700530824 /* SingleView.swift in Sources */,
 				5271B3241C5FCFD1004813DC /* LoginViewController.swift in Sources */,
 				5271B2D71C5FC2C7004813DC /* ViewController.swift in Sources */,
 				5271B3261C5FCFE8004813DC /* SignupViewController.swift in Sources */,
 				5271B2D51C5FC2C7004813DC /* AppDelegate.swift in Sources */,
+				5264F72D1C6D43E800530824 /* SingleViewController.swift in Sources */,
 				5271B32B1C5FD54E004813DC /* ProductView.swift in Sources */,
 				5271B3281C5FCFFA004813DC /* PictureViewController.swift in Sources */,
 			);
@@ -589,6 +597,7 @@
 				5271B2FB1C5FC2C7004813DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5271B2FC1C5FC2C7004813DC /* Build configuration list for PBXNativeTarget "Orchid_ProductsTests" */ = {
 			isa = XCConfigurationList;
@@ -597,6 +606,7 @@
 				5271B2FE1C5FC2C7004813DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5271B2FF1C5FC2C7004813DC /* Build configuration list for PBXNativeTarget "Orchid_ProductsUITests" */ = {
 			isa = XCConfigurationList;
@@ -605,6 +615,7 @@
 				5271B3011C5FC2C7004813DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

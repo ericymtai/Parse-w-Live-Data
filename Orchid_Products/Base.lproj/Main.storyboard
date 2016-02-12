@@ -132,7 +132,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="694" y="406"/>
+            <point key="canvasLocation" x="581" y="406"/>
         </scene>
         <!--Sign up-->
         <scene sceneID="iR8-QC-AkS">
@@ -236,7 +236,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hHz-4m-5Xj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1312" y="289"/>
+            <point key="canvasLocation" x="996" y="406"/>
         </scene>
         <!--Product view-->
         <scene sceneID="1qb-0a-vj7">
@@ -249,13 +249,35 @@
                     <view key="view" contentMode="scaleToFill" id="qqf-El-EBf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.78603274099999998" green="0.66509534150000005" blue="0.94614361700000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.82914123985817612" green="0.70197931861930774" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Product view" id="9Cx-J1-AED"/>
+                    <connections>
+                        <segue destination="lxx-do-CAO" kind="push" identifier="solo" id="CfL-hG-cbc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n8t-hM-i29" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1151" y="1270"/>
+            <point key="canvasLocation" x="802" y="1157"/>
+        </scene>
+        <!--Detail View-->
+        <scene sceneID="zXd-HR-ZH3">
+            <objects>
+                <viewController id="lxx-do-CAO" customClass="SingleViewController" customModule="Orchid_Products" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pFR-p9-OPe"/>
+                        <viewControllerLayoutGuide type="bottom" id="XgR-kW-wtd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="U3k-UQ-GNk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.94117647058823528" green="0.86274509803921573" blue="0.68627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Detail View" id="oeg-0G-Cq7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JIb-SU-f89" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1232" y="1157"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CjA-n1-H5b">
@@ -277,6 +299,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="nXO-tm-Xeu"/>
+        <segue reference="NRX-Sc-Loc"/>
     </inferredMetricsTieBreakers>
 </document>
