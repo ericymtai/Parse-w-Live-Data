@@ -48,7 +48,7 @@ class SingleViewController: UIViewController {
                             }
                         }
                         
-                        product.backgroundColor = UIColor(red: 161.0/255.0, green: 130.0/255.0, blue: 239.0/255.0, alpha: 1.0)
+                        product.backgroundColor = UIColor(red: 240.0/255.0, green: 220.0/255.0, blue: 175.0/255.0, alpha: 1.0)
                         count++
                         self.view.addSubview(product)
 //                        let tapGesture = UITapGestureRecognizer(target: self, action: "openDetails:")

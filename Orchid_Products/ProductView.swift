@@ -12,13 +12,14 @@ class ProductView: UIView {
 
     let nameLabel = UILabel(frame: CGRect(x: 50, y:10, width: 200, height: 20))
     let priceLabel = UILabel(frame: CGRect(x: 50, y:30, width: 200, height: 20))
-    let imageView = UIImageView(frame: CGRect(x:110, y: 50, width: 80, height: 82))
+    let imageView = UIImageView(frame: CGRect(x: 41, y: 10, width: 220, height: 120))
     
     func setup() {
         let tap = UITapGestureRecognizer(target: self, action: "tapped:")
         
         self.addGestureRecognizer(tap)
-        imageView.contentMode = .ScaleAspectFill
+        imageView.contentMode = .ScaleAspectFill 
+//        imageView.contentMode = .Center
         imageView.clipsToBounds = true
 //        priceLabel.backgroundColor = UIColor(red: 161.0/255.0, green: 130.0/255.0, blue: 239.0/255.0, alpha: 1.0)
 //        nameLabel.backgroundColor = UIColor(red: 161.0/255.0, green: 130.0/255.0, blue: 239.0/255.0, alpha: 1.0)
